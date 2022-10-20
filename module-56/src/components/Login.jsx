@@ -1,4 +1,5 @@
 import React from "react";
+import { handleClickGoogle } from "../utilitis/firebase/firebaseGoogleConfig";
 
 function Login() {
   return (
@@ -68,7 +69,7 @@ function Login() {
                 </div>
 
                 {/* login with facebook */}
-                <a
+                <div
                   className="px-7 py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
                   style={{ backgroundColor: "#3b5998" }}
                   href="#!"
@@ -87,12 +88,12 @@ function Login() {
                     />
                   </svg>
                   Continue with Facebook
-                </a>
-                {/* login with facebook */}
-                <a
+                </div>
+                {/* login with google */}
+                <div
                   className="px-7 py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center"
                   style={{ backgroundColor: "#55acee" }}
-                  href="#!"
+                  onClick={handleClickGoogle}
                   role="button"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
@@ -108,7 +109,7 @@ function Login() {
                     ></path>
                   </svg>
                   Continue with Google
-                </a>
+                </div>
               </form>
             </div>
           </div>

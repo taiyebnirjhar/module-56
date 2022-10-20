@@ -1,11 +1,11 @@
 import React from "react";
-import FirebaseGoogle from "./utilitis/firebase/FirebaseGoogle";
+import Login from "./components/Login";
 
 function App() {
   return (
     <div>
-      {/* <Login /> */}
-      <FirebaseGoogle />
+      <Login />
+      {/* <FirebaseGoogle /> */}
     </div>
   );
 }

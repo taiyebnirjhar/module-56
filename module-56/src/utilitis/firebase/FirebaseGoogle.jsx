@@ -1,13 +1,16 @@
-import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import React from "react";
 import app from "./firebaseConfig";
 
-const auth = getAuth(app);
-
 function FirebaseGoogle() {
   const provider = new GoogleAuthProvider();
+  const auth = getAuth(app);
+
   const handleClick = () => {
-    console.log("clicked on google");
+    signInWithPopup(auth, provider)
+      .then((res) => console.log(res))
+      .catch((err) => console.error(err.message));
+
     alert("clicked on google");
   };
 
