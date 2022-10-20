@@ -12,6 +12,16 @@
       <td>56.1: authentication vs authorization</td>
       <td>example: normal user ( authentication ), admin user ( authorization ) </td>
     </tr>
+     <tr>
+      <td>56.2: firebase auth init and set sign in with google</td>
+      <td> 
+      <ul>
+      <li> create new project and get firebase config key </li>
+      <li> follow instruction from firebase google setup. ex: create auth using getAuth, create google auth provider, </li>
+      <li>Enable Google Sign in Method </li>
+      </ul>
+      </td>
+    </tr>
     
   </tbody>
 </table>
