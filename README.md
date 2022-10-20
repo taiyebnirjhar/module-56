@@ -17,7 +17,7 @@
       <td> 
       <ul>
       <li> create new project and get firebase config key </li>
-      <li> follow instruction from firebase google setup. ex: create auth using getAuth, create google auth provider, </li>
+      <li> follow instruction from firebase google setup. <br> ex: create auth using getAuth, create google auth provider, </li>
       <li>Enable Google Sign in Method </li>
       </ul>
       </td>
