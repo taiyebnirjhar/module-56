@@ -27,7 +27,7 @@
       <td> 
       <ul>
          <li> Import <code>signInWithPopup</code> from firebase </li>
-         <li> <code>signInWithPopup()</code>  is an async function with returns a promise. and it receive 2 params. auth & provider </li>
+         <li> <code>signInWithPopup()</code>  is an async function which returns a promise. and it receive 2 params. auth & provider </li>
          <li>create auth with <br> <code> const auth = getAuth(app);</code> <br> here app is imported from firebaseConfig file </li>
          <li>create provider with <br> <code>const provider = new GoogleAuthProvider();
          </code></li>
