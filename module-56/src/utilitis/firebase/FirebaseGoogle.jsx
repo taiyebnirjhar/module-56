@@ -1,33 +1,54 @@
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import React, { useState } from "react";
+import {
+  getAuth,
+  GoogleAuthProvider,
+  signInWithPopup,
+  signOut,
+} from "firebase/auth";
+import React, { useEffect, useState } from "react";
 import User from "../../components/User";
 import app from "./firebaseConfig";
 
 function FirebaseGoogle() {
   /**********************************************/
   const [user, setUser] = useState({});
+  const [toggler, setToggler] = useState(false);
   /**********************************************/
   const provider = new GoogleAuthProvider();
   const auth = getAuth(app);
   /**********************************************/
 
+  useEffect(() => {
+    console.log(user);
+  }, [user]);
+
   const handleClick = () => {
     signInWithPopup(auth, provider)
       .then((res) => {
-        console.log(typeof res);
         setUser(res.user);
-        console.log(user);
-        // setUser(res.user);
+        setToggler((prev) => !prev);
+      })
+      .catch((err) => console.error(err.message));
+  };
+  const logOut = () => {
+    signOut(auth)
+      .then((res) => {
+        setUser({});
+        setToggler((prev) => !prev);
       })
       .catch((err) => console.error(err.message));
   };
 
-  console.log(user === true);
-
   return (
     <div className="flex flex-col justify-center items-center xl:h-screen">
-      {user && <User />}
-      {!user && (
+      {toggler && (
+        <User
+          userImage={user.photoURL}
+          userName={user.displayName}
+          userEmail={user.email}
+          clickHandler={logOut}
+        />
+      )}
+      {!toggler && (
         <button
           type="button"
           className="text-white bg-[#4285F4] hover:bg-[#4285F4]/90  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2"

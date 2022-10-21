@@ -35,6 +35,26 @@
       </ul>
       </td>
     </tr>
-    
+    <tr>
+      <td>56.5: Logout google</td>
+      <td> 
+      <ul>
+         <li> signOut is very similer to signInWithPopup </li>
+         <li> example: 
+            <code>
+             import { getAuth, signOut } from "firebase/auth";
+             const auth = getAuth();
+             signOut(auth).then(() => {
+             // Sign-out successful.
+             }).catch((error) => {
+             // An error happened.
+             });
+             </code> 
+          </li>
+
+</ul>
+</td>
+</tr>
+
   </tbody>
 </table>
