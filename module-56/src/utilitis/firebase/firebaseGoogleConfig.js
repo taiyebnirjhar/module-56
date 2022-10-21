@@ -6,6 +6,9 @@ const auth = getAuth(app);
 
 export const handleClickGoogle = () => {
   signInWithPopup(auth, provider)
-    .then((res) => console.log(res))
+    .then((res) => {
+      alert(`hello ${res.user.displayName}`);
+      console.log(res);
+    })
     .catch((err) => console.error(err.message));
 };
