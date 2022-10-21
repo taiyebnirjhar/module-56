@@ -41,15 +41,15 @@
       <ul>
          <li> signOut is very similer to signInWithPopup </li>
          <li> example: <br>
-            <code>
-             import { getAuth, signOut } from "firebase/auth"; <br>
-             const auth = getAuth(); <br>
-             signOut(auth).then(() => { <br>
-             // Sign-out successful. <br>
-             }).catch((error) => { <br>
-             // An error happened. <br>
-             }); <br>
-             </code> 
+         <code>
+              <code> import { getAuth, signOut } from "firebase/auth"; </code> 
+              <code>  const auth = getAuth();</code>
+              <code>  signOut(auth).then(() => { </code>
+              <code>  // Sign-out successful </code>
+              <code>  }).catch((error) => {  </code>
+              <code>  // An error happened.  </code>
+                });
+          </code> 
           </li>
 
 </ul>
