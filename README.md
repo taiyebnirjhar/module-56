@@ -40,7 +40,7 @@
       <td> 
       <ul>
          <li> signOut is very similer to signInWithPopup </li>
-         <li> example: 
+         <li> example: <br>
             <code>
              import { getAuth, signOut } from "firebase/auth";
              const auth = getAuth();
